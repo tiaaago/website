@@ -1,0 +1,270 @@
+.container {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 1125px;
+    padding-inline: 30px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10rem;
+    gap: 15px;
+}
+
+.discordStatus {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.spotifyIcon {
+    font-size: 23px;
+    color: #1DB954;
+}
+
+.dnd {
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background-color: #EF4444;
+}
+
+.offline {
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background-color: #7D7D7D;
+}
+
+.idle {
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background-color: #F59E0B;
+}
+
+.online {
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background-color: #22C55E;
+}
+
+.discordStatusText {
+    font-weight: 500;
+    color: #878787;
+}
+
+.headerLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 280px;
+}
+
+.headerTitle {
+    font-family: 'Montserrat';
+    font-size: 45px;
+    font-weight: 700;
+    color: white;
+    max-width: 19rem;
+}
+
+.headerDescription {
+    color: white;
+    max-width: 22rem;
+}
+
+.headerPfp {
+    border-radius: 50%;
+    box-shadow: 0px 9px 23px 14px rgba(0, 0, 0, 0.25);
+}
+
+.aboutMe {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    color: white;
+    border: 1px solid #7D7D7D;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #3B3B3B;
+    box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.30);
+}
+
+.aboutMeTitle {
+    text-align: center;
+}
+
+.columnes {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.experiences {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+}
+
+.experiencesBox {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 20px;
+    color: white;
+    border: 1px solid #7D7D7D;
+    border-radius: 5px;
+    background-color: #3B3B3B;
+    box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.30);
+    opacity: 0.8;
+    transition: all 0.15s ease-in-out;
+}
+
+.experiencesBox:hover {
+    opacity: 1;
+}
+
+.boxTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.boxTitle {
+    white-space: nowrap;
+    font-size: 18px;
+}
+
+.boxDescription {
+    white-space: nowrap;
+    color: #AEAEAE;
+}
+
+.boxDate {
+    white-space: nowrap;
+    color: #AEAEAE;
+    font-size: 14px;
+}
+
+.technologiesBoxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 4rem;
+}
+
+.technologiesBox {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    color: white;
+    border: 1px solid #7D7D7D;
+    border-radius: 5px;
+    background-color: #3B3B3B;
+    box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.30);
+    opacity: 0.8;
+    transition: all 0.15s ease-in-out;
+}
+
+.technologiesBox:hover {
+    opacity: 1;
+}
+
+.technologiesList {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.technologyImg {
+    width: 30px;
+}
+
+.callToAction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    color: white;
+    border: 1px solid #7D7D7D;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #3B3B3B;
+    box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.30);
+}
+
+.callToActionTitle {
+    text-align: center;
+}
+
+.callToActionText {
+    text-align: center;
+}
+
+.callToActionBtn {
+    border: 1px solid #7D7D7D;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background-color: #616161;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .headerLeft {
+        align-items: center;
+    }
+
+    .discordStatus {
+        display: flex;
+        justify-content: center;
+    }
+
+    .headerTitle {
+        text-align: center;
+    }
+
+    .headerDescription {
+        text-align: center;
+    }
+
+    .technologiesBoxes {
+        grid-template-columns: 1fr;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

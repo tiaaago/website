@@ -1,0 +1,31 @@
+.container {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 1125px;
+    padding-inline: 30px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 40rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8rem;
+    gap: 5px;
+}
+
+.headerTitle {
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+}
+
+.headerDescription {
+    color: white;
+}
