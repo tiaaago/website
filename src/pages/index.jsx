@@ -90,7 +90,7 @@ export default function Home() {
                         <p className={styles.headerDescription}>Seja bem vindo ao meu cantinho pessoal na web! Entre, não precisa tirar os sapatos...</p>
                     </div>
                     <div className={styles.headerRight}>
-                        <img src="https://cdn.discordapp.com/avatars/852610866683445328/408bc7affb7983e5c16e1eb46d748e0f.png?size=2048" alt="" className={styles.headerPfp} />
+                        <img src="/foto.jpg" alt="" className={styles.headerPfp} />
                     </div>
                 </header>
                 <div className={styles.aboutMe} id="sobre">
