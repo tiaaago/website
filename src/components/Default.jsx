@@ -2,6 +2,9 @@ import Head from 'next/head'
 import Link from "next/link";
 import styles from '@/components/Default.module.css'
 import { useEffect, useState } from 'react';
+import '@/styles/Contact.module.css'
+import '@/styles/Home.module.css'
+import '@/styles/404.module.css'
 
 export default function Default({ children }) {
     const [displayChildren, setDisplayChildren] = useState(children);
