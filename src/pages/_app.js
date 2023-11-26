@@ -1,4 +1,3 @@
-import Default from '@/components/Default'
 import '@/styles/globals.css'
 import Head from 'next/head'
 
@@ -8,9 +7,7 @@ export default function App({ Component, pageProps }) {
             <Head>
                 <title>Tiago Farias</title>
             </Head>
-            <Default>
-                <Component {...pageProps} />
-            </Default>
+            <Component {...pageProps} />
         </>
     )
 }
