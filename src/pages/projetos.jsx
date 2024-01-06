@@ -37,10 +37,6 @@ export default function Home() {
                             {/* <div className={styles.tag}>Esse site!</div> */}
                             <h3 className={styles.projectTitle}>EduCEL</h3>
                             <p className={styles.projectDescription}>Um portal do estudante para os alunos do Centro Educacional do Lago.</p>
-                            <div className={styles.buttons}>
-                                <Link href="/" className={styles.projectLink}><i className="fa-solid fa-link"></i>Website</Link>
-                                <Link href="https://github.com/tiaaago/website" target='_blank' className={styles.projectLink}><i className="fa-brands fa-github"></i>GitHub</Link>
-                            </div>
                         </div>
                     </div>
                 </div>
