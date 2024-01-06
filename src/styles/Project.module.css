@@ -1,0 +1,142 @@
+.container {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 1125px;
+    padding-inline: 30px;
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    width: 100%;
+    z-index: 99;
+}
+
+.navbarContent {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+    padding: 20px;
+    background-color: #232323;
+    border-radius: 7px;
+}
+
+.navbarOption {
+    font-weight: 500;
+    opacity: 0.7;
+    transition: all .2s ease-in-out;
+}
+
+.navbarOption:hover {
+    opacity: 1;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 22rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8rem;
+    gap: 5px;
+}
+
+.headerTitle {
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+}
+
+.headerDescription {
+    color: white;
+}
+
+/* LAYOUT */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 7px;
+    background-color: #232323;
+    border: 1px solid #555;
+}
+
+.projectBanner {
+    width: 100%;
+    border-radius: 7px 7px 0px 0px;
+}
+
+.projectBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-evenly;
+    height: 100%;
+    padding-block: 15px;
+}
+
+.tag {
+    background-color: #3B3B3B;
+    padding: 5px 8px;
+    font-weight: 600;
+    font-size: 13px;
+    border-radius: 3px;
+}
+
+.projectDescription {
+    text-align: center;
+}
+
+.projectLink {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #2b2b2b;
+    padding: 5px 8px;
+    font-weight: 600;
+    font-size: 13px;
+    border-radius: 3px;
+    border: 1px solid #515151;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* LAYOUT */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    background-color: #3B3B3B;
+    margin-top: 30px;
+    padding-block: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        margin-bottom: 10rem;
+    }
+
+    .contactBoxes {
+        grid-template-columns: 1fr;
+    }
+}

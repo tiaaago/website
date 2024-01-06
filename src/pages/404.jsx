@@ -8,8 +8,8 @@ export default function Error() {
             <nav className={styles.navbar}>
                 <div className={styles.navbarContent}>
                     <Link href="/" className={styles.navbarOption}>Início</Link>
-                    {/* <Link href="/projetos" className={styles.navbarOption}>Projetos</Link>
-                <Link href="/misc" className={styles.navbarOption}>Miscelânea</Link> */}
+                    <Link href="/projetos" className={styles.navbarOption}>Projetos</Link>
+                    {/* <Link href="/misc" className={styles.navbarOption}>Miscelânea</Link> */}
                     <Link href="/contato" className={styles.navbarOption}>Contato</Link>
                 </div>
             </nav>

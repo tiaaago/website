@@ -60,6 +60,11 @@
     color: #1DB954;
 }
 
+.activityImage {
+    width: 25px;
+    border-radius: 50%;
+}
+
 .dnd {
     width: 21px;
     height: 21px;

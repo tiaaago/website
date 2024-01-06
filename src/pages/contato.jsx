@@ -1,7 +1,5 @@
-import Head from 'next/head'
 import styles from '@/styles/Contact.module.css'
 import 'balloon-css';
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 export default function Home() {
@@ -10,8 +8,8 @@ export default function Home() {
             <nav className={styles.navbar}>
                 <div className={styles.navbarContent}>
                     <Link href="/" className={styles.navbarOption}>Início</Link>
-                    {/* <Link href="/projetos" className={styles.navbarOption}>Projetos</Link>
-                    <Link href="/misc" className={styles.navbarOption}>Miscelânea</Link> */}
+                    <Link href="/projetos" className={styles.navbarOption}>Projetos</Link>
+                    {/* <Link href="/misc" className={styles.navbarOption}>Miscelânea</Link> */}
                     <Link href="/contato" className={styles.navbarOption}>Contato</Link>
                 </div>
             </nav>

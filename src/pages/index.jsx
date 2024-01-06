@@ -54,38 +54,48 @@ export default function Home() {
         });
     }, [])
 
+    function isValidURL(string) {
+        var res = string.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+        return (res !== null)
+    };
+
 
     return (
         <>
             <nav className={styles.navbar}>
                 <div className={styles.navbarContent}>
                     <Link href="/" className={styles.navbarOption}>Início</Link>
-                    {/* <Link href="/projetos" className={styles.navbarOption}>Projetos</Link>
-                    <Link href="/misc" className={styles.navbarOption}>Miscelânea</Link> */}
+                    <Link href="/projetos" className={styles.navbarOption}>Projetos</Link>
+                    {/* <Link href="/misc" className={styles.navbarOption}>Miscelânea</Link> */}
                     <Link href="/contato" className={styles.navbarOption}>Contato</Link>
                 </div>
             </nav>
             <main className={`${styles.container} ${styles.main}`}>
                 <header className={styles.header}>
                     <div className={styles.headerLeft}>
-                        <div className={`${status ? styles.discordStatus : ''}`}>
-                            {
-                                status?.listening_to_spotify && (
-                                    <>
-                                        <i className={`fa-brands fa-spotify ${styles.spotifyIcon}`}></i>
-                                        <p className={styles.discordStatusText}>Ouvindo Spotify</p>
-                                    </>
-                                )
-                            }
-                            {
-                                status && !status?.listening_to_spotify && (
-                                    <>
-                                        <div className={`${styles[status.discord_status]}`}></div>
-                                        <p className={styles.discordStatusText}>{status.discord_status != "offline" ? "Online" : "Offline"}</p>
-                                    </>
-                                )
-                            }
-                        </div>
+                        {
+                            status && (
+                                <>
+                                    <div className={`${status ? styles.discordStatus : ''}`}>
+                                        {
+                                            status?.listening_to_spotify ? (
+                                                <>
+                                                    <i className={`fa-brands fa-spotify ${styles.spotifyIcon}`}></i>
+                                                    <p className={styles.discordStatusText}>Ouvindo: <b>{status?.spotify.song}</b> — <b>{status?.spotify.artist.replaceAll(';', ',')}</b> {status?.activities.length - 1 > 0 ? `(+${status?.activities.length - 1} atividade${status?.activities.length - 1 > 1 ? 's' : ''})` : ''}</p>
+                                                </>
+                                            ) : (
+                                                <>
+                                                    {
+                                                        isNaN(status?.activities[0].large_image) && status?.activities[0].large_image ? <img className={styles.activityImage} src={`https://cdn.discordapp.com/app-assets/${status?.activities[0].application_id}/${status?.activities[0].assets.large_image}.png`}></img> : <div className={`${styles[status.discord_status]}`}></div>
+                                                    }
+                                                    <p className={styles.discordStatusText}>{status?.activities.filter(activity => activity.name != "Custom Status").length > 0 ? (<>Jogando <b>{status?.activities[0].name}</b></>) : `${status.discord_status != "offline" ? "Online" : "Offline"}`}</p>
+                                                </>
+                                            )
+                                        }
+                                    </div>
+                                </>
+                            )
+                        }
                         <h1 className={styles.headerTitle}>Olá, eu sou o Tiago!</h1>
                         <p className={styles.headerDescription}>Seja bem vindo ao meu cantinho pessoal na web! Entre, não precisa tirar os sapatos...</p>
                     </div>
