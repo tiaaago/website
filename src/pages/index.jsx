@@ -86,7 +86,7 @@ export default function Home() {
                                             ) : (
                                                 <>
                                                     {
-                                                        isNaN(status?.activities.filter(activity => activity.name != "Custom Status")[0].large_image) && status?.activities.filter(activity => activity.name != "Custom Status")[0].large_image ? <img className={styles.activityImage} src={`https://cdn.discordapp.com/app-assets/${status?.activities[0].application_id}/${status?.activities[0].assets.large_image}.png`}></img> : <div className={`${styles[status.discord_status]}`}></div>
+                                                        isNaN(status?.activities?.filter(activity => activity.name != "Custom Status")[0]?.large_image) && status?.activities.filter(activity => activity.name != "Custom Status")[0]?.large_image ? <img className={styles.activityImage} src={`https://cdn.discordapp.com/app-assets/${status?.activities[0].application_id}/${status?.activities[0].assets.large_image}.png`}></img> : <div className={`${styles[status.discord_status]}`}></div>
                                                     }
                                                     <p className={styles.discordStatusText}>{status?.activities.filter(activity => activity.name != "Custom Status").length > 0 ? (<>Jogando <b>{status?.activities[0].name}</b></>) : `${status.discord_status != "offline" ? "Online" : "Offline"}`}</p>
                                                 </>
