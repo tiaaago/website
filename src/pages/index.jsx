@@ -86,7 +86,7 @@ export default function Home() {
                                             ) : (
                                                 <>
                                                     {
-                                                        isNaN(status?.activities[0].large_image) && status?.activities[0].large_image ? <img className={styles.activityImage} src={`https://cdn.discordapp.com/app-assets/${status?.activities[0].application_id}/${status?.activities[0].assets.large_image}.png`}></img> : <div className={`${styles[status.discord_status]}`}></div>
+                                                        isNaN(status?.activities.filter(activity => activity.name != "Custom Status")[0].large_image) && status?.activities.filter(activity => activity.name != "Custom Status")[0].large_image ? <img className={styles.activityImage} src={`https://cdn.discordapp.com/app-assets/${status?.activities[0].application_id}/${status?.activities[0].assets.large_image}.png`}></img> : <div className={`${styles[status.discord_status]}`}></div>
                                                     }
                                                     <p className={styles.discordStatusText}>{status?.activities.filter(activity => activity.name != "Custom Status").length > 0 ? (<>Jogando <b>{status?.activities[0].name}</b></>) : `${status.discord_status != "offline" ? "Online" : "Offline"}`}</p>
                                                 </>
@@ -113,16 +113,34 @@ export default function Home() {
                             <h2 className={styles.sectionTitle}>Experiências</h2>
                             <div className={styles.experiencesBox}>
                                 <div className={styles.boxTop}>
-                                    <h4 className={styles.boxTitle}>Flowind</h4>
-                                    <p className={styles.boxDate}>2023 ~ 2023</p>
+                                    <h4 className={styles.boxTitle}>Fir3</h4>
+                                    <p className={styles.boxDate}>12/2022 ~ 08/2023</p>
                                 </div>
                                 <div className={styles.boxBotton}>
-                                    <p className={styles.boxDescription}>Trainee — Desenvolvedor Front-End</p>
+                                    <p className={styles.boxDescription}>Criador e Desenvolvedor</p>
+                                </div>
+                            </div>
+                            <div className={styles.experiencesBox}>
+                                <div className={styles.boxTop}>
+                                    <h4 className={styles.boxTitle}>Ganty</h4>
+                                    <p className={styles.boxDate}>07/2022 ~ 05/2023</p>
+                                </div>
+                                <div className={styles.boxBotton}>
+                                    <p className={styles.boxDescription}>Criador e Desenvolvedor</p>
                                 </div>
                             </div>
                         </div>
                         <div className={styles.section}>
                             <h2 className={styles.sectionTitle}>Educacional</h2>
+                            <div className={styles.experiencesBox}>
+                                <div className={styles.boxTop}>
+                                    <h4 className={styles.boxTitle}>Senac EaD</h4>
+                                    <p className={styles.boxDate}>2023 ~ Atualmente</p>
+                                </div>
+                                <div className={styles.boxBotton}>
+                                    <p className={styles.boxDescription}>Análise e Desenvolvimento de Sistemas</p>
+                                </div>
+                            </div>
                             <div className={styles.experiencesBox}>
                                 <div className={styles.boxTop}>
                                     <h4 className={styles.boxTitle}>CEL</h4>
