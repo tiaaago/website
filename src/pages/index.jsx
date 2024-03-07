@@ -161,7 +161,7 @@ export default function Home() {
                                     <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target='_blank' aria-label="JavaScript" data-balloon-pos="up" onFocus={e => e.target.blur()}><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" className={styles.technologyImg} /></a>
                                     <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target='_blank' aria-label="HTML" data-balloon-pos="up" onFocus={e => e.target.blur()}><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" className={styles.technologyImg} /></a>
                                     <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target='_blank' aria-label="CSS" data-balloon-pos="up" onFocus={e => e.target.blur()}><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" className={styles.technologyImg} /></a>
-                                    <a href="https://kotlinlang.org" target='_blank' aria-label="Kotlin (Aprendendo)" data-balloon-pos="up" onFocus={e => e.target.blur()}><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" className={styles.technologyImg} /></a>
+                                    <a href="https://dev.java" target='_blank' aria-label="Java (Aprendendo)" data-balloon-pos="up" onFocus={e => e.target.blur()}><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" className={styles.technologyImg} /></a>
                                 </div>
                             </div>
                             <div className={styles.technologiesBox}>

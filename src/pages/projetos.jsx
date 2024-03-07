@@ -20,7 +20,7 @@ export default function Home() {
                 </header>
                 <div className={styles.projects}>
                     <div className={styles.project}>
-                        <img className={styles.projectBanner} src="https://cdn.discordapp.com/attachments/824699568297345065/1192547490541604964/opera_qJaBzVTAwN.png" alt="" />
+                        <img className={styles.projectBanner} src="/website.png" alt="" />
                         <div className={styles.projectBody}>
                             <div className={styles.tag}>Esse site!</div>
                             <h3 className={styles.projectTitle}>devtiago.xyz</h3>
@@ -32,11 +32,14 @@ export default function Home() {
                         </div>
                     </div>
                     <div className={styles.project}>
-                        <img className={styles.projectBanner} src="https://cdn.discordapp.com/attachments/824699568297345065/1193016365825658931/opera_gODVfrqnIn.png" alt="" />
+                        <img className={styles.projectBanner} src="/educel.png" alt="" />
                         <div className={styles.projectBody}>
                             {/* <div className={styles.tag}>Esse site!</div> */}
                             <h3 className={styles.projectTitle}>EduCEL</h3>
                             <p className={styles.projectDescription}>Um portal do estudante para os alunos do Centro Educacional do Lago.</p>
+                            <div className={styles.buttons}>
+                                <Link href="https://educel.vercel.app/" className={styles.projectLink}><i className="fa-solid fa-link"></i>Website</Link>
+                            </div>
                         </div>
                     </div>
                 </div>
